@@ -1,0 +1,202 @@
+@font-face {
+    font-family: 'Raleway Bold';
+    font-style: Bold;
+    src: local('Raleway Bold'),
+        url(fonts/Raleway-Bold.woff2) format('woff2'),
+        url(fonts/Raleway-Bold.woff) format('woff'),
+        url(fonts/Raleway-Bold.ttf) format('ttf'),
+        url(fonts/Raleway-Bold.eot) format('eot');
+}
+
+@font-face {
+    font-family: 'Raleway Regular';
+    font-style: Regular;
+    src: local('Raleway Regular'),
+        url(fonts/Raleway-Regular.woff2) format('woff2'),
+        url(fonts/Raleway-Regular.woff) format('woff'),
+        url(fonts/Raleway-Regular.ttf) format('ttf'),
+        url(fonts/Raleway-Regular.eot) format('eot');
+}
+
+@font-face {
+    font-family: 'Raleway SemiBold';
+    font-style: SemiBold;
+    src: local('Raleway SemiBold'),
+        url(fonts/Raleway-SemiBold.woff2) format('woff2'),
+        url(fonts/Raleway-SemiBold.woff) format('woff'),
+        url(fonts/Raleway-SemiBold.ttf) format('ttf'),
+        url(fonts/Raleway-SemiBold.eot) format('eot');
+}
+
+@font-face {
+    font-family: 'Raleway Black';
+    font-style: Black;
+    src: local('Raleway Black'),
+        url(fonts/Raleway-Black.woff2) format('woff2'),
+        url(fonts/Raleway-Black.woff) format('woff'),
+        url(fonts/Raleway-Black.ttf) format('ttf'),
+        url(fonts/Raleway-Black.eot) format('eot');
+}
+
+@mixin fonts ($ff, $fs, $fw, $fsz, $lh) {
+    font-family: $ff;
+    font-style: $fs;
+    font-weight: $fw;
+    font-size: $fsz;
+    line-height: $lh;
+}
+
+body {
+    width: 1510px;
+    overflow-x: hidden;
+    margin: 0px;
+}
+
+.block-1 {
+    height: 747px;
+    background: linear-gradient(rgba(#252B49, 0.8),
+            rgba(#252B49, 0.8)),
+        url('images/img.svg');
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    button {
+        width: 370px;
+        height: 80px;
+        background: #FF4343;
+        border: none;
+        @include fonts(Raleway Black, normal, 900, 24px, 28px);
+        color: white;
+        text-transform: uppercase;
+        margin-top: 80px;
+    }
+}
+
+.header {
+    display: grid;
+    height: 100px;
+    width: 1170px;
+    border-bottom: 1px solid #BABBC5;
+    align-items: center;
+    justify-content: space-between;
+    grid-template-columns: 200px 670px;
+}
+
+.menu {
+    display: grid;
+    grid-template-columns: repeat(5, 134px);
+}
+
+.menu-section {
+    @include fonts(Raleway Bold, normal, 700, 13px, 15px);
+    text-transform: uppercase;
+    display: grid;
+    place-items: center;
+    color: white;
+    height: 100px;
+    box-sizing: border-box;
+
+    &:hover {
+        border-bottom: 3px solid #BABBC5;
+    }
+}
+
+.block-1__title {
+    width: 1170px;
+    @include fonts(Raleway Black, normal, 900, 64px, 75px);
+    color: white;
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 130px;
+}
+
+.block-1__text {
+    width: 1170px;
+    margin-top: 31px;
+    @include fonts(Raleway Regular, normal, 400, 24px, 28px);
+    text-align: center;
+    color: white;
+}
+
+.block-2 {
+    height: 949px;
+    display: grid;
+    place-content: center;
+}
+
+.benefits-wrap {
+    display: grid;
+    grid-template-columns: repeat(3, 370px);
+    grid-template-rows: repeat(2, 305px);
+    height: 717px;
+    width: 1170px;
+    justify-content: space-between;
+    row-gap: 90px;
+}
+
+.benefit {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    img {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+.benefit-title {
+    @include fonts(Raleway Black, normal, 900, 24px, 28px);
+    margin-top: 29px;
+    text-transform: uppercase;
+    height: 72px;
+    display: grid;
+    place-content: center;
+}
+
+.benefit-text {
+    margin-top: 20px;
+    height: 84px;
+    @include fonts(Raleway Regular, normal, 400, 18px, 21px);
+    color: #6C7279;
+    text-align: center;
+}
+
+.block-3 {
+    display: grid;
+    grid-template-columns: repeat(4, 378px);
+    grid-template-rows: repeat(2, 340px);
+    gap: 1px;
+}
+
+.image-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    &:nth-child(3) {
+        background: linear-gradient(rgba(255, 67, 67, 0.8),
+                rgba(255, 67, 67, 0.8)),
+            url('images/Rectangle17.svg');
+    }
+
+    img {
+        height: 100%;
+        width: 100%;
+    }
+
+}
+
+.image-title {
+    @include fonts(Raleway Black, normal, 900, 24px, 28px);
+    color: white;
+    text-transform: uppercase;
+}
+
+.image-text {
+    @include fonts(Raleway Regular, normal, 400, 18px, 21px);
+    color: white;
+    margin-top: 20px;
+}
